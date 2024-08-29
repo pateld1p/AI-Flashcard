@@ -23,15 +23,15 @@ export default function Home() {
     return
     }
   
-  const stripe = await getStripe()
-  const {error} = await stripe.redirectToCheckout({
-    sessionId: checkoutSessionJson.id
-  })
+    const stripe = await getStripe()
+    const {error} = await stripe.redirectToCheckout({
+      sessionId: checkoutSessionJson.id
+    })
 
-  if (error){
-    console.warn(error.message)
+    if (error){
+      console.warn(error.message)
+    }
   }
-}
 
   return (
     <Container maxWidth="100v">
@@ -42,7 +42,7 @@ export default function Home() {
 
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" style ={{flexGrow: 1}}>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>
             Flashcard SaaS
           </Typography>
           <SignedOut>
@@ -63,7 +63,6 @@ export default function Home() {
       >
         <Typography variant="h2" gutterBottom>Welcome to Flashcard SaaS</Typography>
         <Typography variant="h5" gutterBottom>
-          {' '}
           The easiest way to create flashcards from your text
         </Typography>
         <Button variant="contained" color="primary" sx={{mt:2}}>Get Started</Button>
@@ -74,21 +73,18 @@ export default function Home() {
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>Easy text Input</Typography>
             <Typography>
-              {' '}
-              Simply paste your text and we'll extract the flashcards for you.
+              Simply paste your text and we&apos;ll extract the flashcards for you.
             </Typography>
           </Grid>
-          <Grid item xs={12 } md={4}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>Smart Flashcards</Typography>
             <Typography>
-              {' '}
               Our AI will break down your text into concise flashcards, perfect for studying on the go.
             </Typography>
           </Grid>
-          <Grid item xs={12 } md={4}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>Accessible Anywhere</Typography>
             <Typography>
-              {' '}
               Access your flashcards from anywhere, on any device.
             </Typography>
           </Grid>
@@ -107,7 +103,6 @@ export default function Home() {
               <Typography variant="h5" gutterBottom>Basic</Typography>
               <Typography variant="h6" gutterBottom>$5 /month</Typography>
               <Typography>
-                {' '}
                 Access to basic flashcard features and limited storage.
               </Typography>
               <Button variant="contained" color="primary" sx={{mt:2}}>Choose Basic</Button>
@@ -123,7 +118,6 @@ export default function Home() {
               <Typography variant="h5" gutterBottom>Pro</Typography>
               <Typography variant="h6" gutterBottom>$10 /month</Typography>
               <Typography>
-                {' '}
                 Unlimited flashcards and storage, with priority support.
               </Typography>
               <Button variant="contained" color="primary" sx={{mt:2}} onClick={handleSubmit}>Choose Pro</Button>
