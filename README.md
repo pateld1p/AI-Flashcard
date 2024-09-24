@@ -1,5 +1,7 @@
 # Flashcard SaaS
 
+## Overview
+
 Welcome to Flashcard SaaS, a cutting-edge web application designed to revolutionize the way students and professionals create, manage, and study flashcards. This comprehensive project will guide you through the process of building a full-fledged Software as a Service (SaaS) application using modern technologies such as Next.js, React, Firebase, and Stripe. By the end of this journey, you’ll have created a powerful, scalable flashcard application that not only showcases your development skills but also provides real value to users seeking to enhance their learning experience.
 
 ## Table of Contents
